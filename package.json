@@ -1,0 +1,29 @@
+{
+  "name": "typedoc-plugin-only-documented",
+  "version": "0.1.0",
+  "description": "plugin for typedoc that only includes @documented annotated comments",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.d.ts",
+    "dist/index.js"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage.enabled"
+  },
+  "author": "Carlos Ingles",
+  "license": "MIT",
+  "peerDependencies": {
+    "typedoc": "^0.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.12",
+    "@vitest/coverage-v8": "^0.34.3",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.3"
+  }
+}
