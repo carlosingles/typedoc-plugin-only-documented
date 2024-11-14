@@ -2,12 +2,12 @@
   "name": "typedoc-plugin-only-documented",
   "version": "1.0.1",
   "description": "plugin for typedoc that only includes @documented annotated comments",
-  "main": "dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
-  "types": "dist/index.d.ts",
   "files": [
-    "dist/index.d.ts",
-    "dist/index.js"
+    "./dist/index.d.ts",
+    "./dist/index.js"
   ],
   "scripts": {
     "prebuild": "rimraf dist",
