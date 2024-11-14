@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-only-documented",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "plugin for typedoc that only includes @documented annotated comments",
   "main": "dist/index.js",
   "type": "module",
