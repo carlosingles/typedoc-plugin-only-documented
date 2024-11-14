@@ -2,15 +2,23 @@
   "name": "typedoc-plugin-only-documented",
   "version": "1.0.2",
   "description": "plugin for typedoc that only includes @documented annotated comments",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
-    "./dist/index.d.ts",
-    "./dist/index.js"
+    "dist/*"
   ],
   "scripts": {
     "prebuild": "rimraf dist",
+    "prepack": "unbuild",
     "build": "tsc -p tsconfig.build.json",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage.enabled"
@@ -50,6 +58,7 @@
     "rimraf": "^6.0.1",
     "semantic-release": "^24.2.0",
     "typescript": "~5.6",
+    "unbuild": "^2.0.0",
     "vitest": "^2.1.5"
   }
 }
